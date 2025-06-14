@@ -82,7 +82,7 @@ function Cart() {
                           {item.name}
                         </Link>
                         <p className="text-gray-600 text-sm mt-1">
-                          ${item.price.toFixed(2)} each
+                          ₹{item.price.toFixed(2)} each
                         </p>
                         <div className="flex flex-wrap gap-1 mt-2">
                           {item.tags.slice(0, 2).map((tag) => (
@@ -119,7 +119,7 @@ function Cart() {
                         {/* Price */}
                         <div className="text-right">
                           <p className="text-lg font-semibold text-gray-800">
-                            ${(item.price * item.quantity).toFixed(2)}
+                            ₹{(item.price * item.quantity).toFixed(2)}
                           </p>
                         </div>
 
@@ -161,7 +161,7 @@ function Cart() {
               <div className="space-y-1 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-semibold">${getCartTotal().toFixed(2)}</span>
+                  <span className="font-semibold">₹{getCartTotal().toFixed(2)}</span>
                 </div>
                 
                 <div className="flex justify-between">
@@ -173,13 +173,13 @@ function Cart() {
                 
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
-                  <span className="font-semibold">${tax.toFixed(2)}</span>
+                  <span className="font-semibold">₹{tax.toFixed(2)}</span>
                 </div>
 
                 {getCartTotal() < 50 && (
                   <div className="bg-accent-50 border border-accent-200 rounded-lg p-3">
                     <p className="text-sm text-accent-800">
-                      Add ${(50 - getCartTotal()).toFixed(2)} more to get free shipping!
+                      Add ₹{(50 - getCartTotal()).toFixed(2)} more to get free shipping!
                     </p>
                   </div>
                 )}
@@ -187,7 +187,7 @@ function Cart() {
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between">
                     <span className="text-lg font-semibold text-gray-800">Total</span>
-                    <span className="text-lg font-bold text-gray-800">${total.toFixed(2)}</span>
+                    <span className="text-lg font-bold text-gray-800">₹{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>

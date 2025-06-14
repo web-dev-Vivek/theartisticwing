@@ -7,13 +7,15 @@ import IMG6 from '../assets/img3.jpg';
 import IMG7 from '../assets/img4.jpg';
 import IMG8 from '../assets/img5.jpg';
 import IMG9 from '../assets/img6.jpg';
-import IMG10 from '../assets/img7.jpg';
 import IMG11 from '../assets/img8.jpg';
 import IMG12 from '../assets/img9.jpg';
 import IMG13 from '../assets/img10.jpg';
 import IMG14 from '../assets/img11.jpg';
 import IMG15 from '../assets/img12.jpg';
 import IMG16 from '../assets/img13.jpg';
+import VID1 from '../assets/minature3.mp4';
+import IMG18 from '../assets/miniature1.jpg';
+import IMG19 from '../assets/miniature2.jpg';
 
 
 export const products = [
@@ -56,9 +58,10 @@ export const products = [
     category: "valentine",
     description: "Romantic heart-shaped wall art perfect for Valentine's Day or year-round decoration. Hand-painted with love and featuring delicate floral patterns in soft pink and gold tones.",
     images: [
-      "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/1557651/pexels-photo-1557651.jpeg?auto=compress&cs=tinysrgb&w=800"
+     VID1,IMG18,IMG19
     ],
+     isVideo: true,
+    className: "autoplay muted loop",
     featured: true,
     inStock: true,
     rating: 4.9,
