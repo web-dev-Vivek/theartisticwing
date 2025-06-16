@@ -18,18 +18,7 @@ function ProductCard({ product }) {
           {!isImageLoaded && (
             <div className="absolute inset-0 bg-gray-200 animate-pulse" />
           )}
-          {product.isVideo ? (
-            <video
-              src={product.images[0]} // path to your video file
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="w-full h-64 object-cover rounded"
-            />
-          ) : (
-            <img
+          <img
               src={product.images[0]}
               alt={product.name}
               className={`w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ${
@@ -37,7 +26,6 @@ function ProductCard({ product }) {
               }`}
               onLoad={() => setIsImageLoaded(true)}
             />
-          )}
 
           {/* Sale Badge */}
           {product.originalPrice && (
