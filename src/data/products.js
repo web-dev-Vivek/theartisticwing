@@ -132,7 +132,7 @@ export const products = [
 export const categories = [
   { id: 'all', name: 'All Products', count: products.length },
   { id: 'Fridge Magnets', name: 'Fridge Magnets', count: products.filter(p => p.category === 'Fridge Magnets').length },
-  { id: 'frames', name: 'Frames', count: products.filter(p => p.category === 'frames').length },
+  { id: 'Frames', name: 'Frames', count: products.filter(p => p.category === 'Frames').length },
   { id: 'Miniature art', name: "Miniature art", count: products.filter(p => p.category === 'Miniature art').length },
   { id: 'DIY LIQUID', name: "DIY LIQUID", count: products.filter(p => p.category === 'DIY LIQUID').length },
   { id: 'Candles', name: "Candles", count: products.filter(p => p.category === 'Candles').length },

@@ -170,10 +170,10 @@ function Products() {
                 <div className="space-y-2">
                   {[
                     { value: 'all', label: 'All Prices' },
-                    { value: '0-25', label: 'Under $25' },
-                    { value: '25-50', label: '$25 - $50' },
-                    { value: '50-75', label: '$50 - $75' },
-                    { value: '75', label: 'Over $75' }
+                    { value: '0-25', label: 'Under ₹25' },
+                    { value: '25-50', label: '₹25 - ₹50' },
+                    { value: '50-75', label: '₹50 - ₹75' },
+                    { value: '75', label: 'Over ₹75' }
                   ].map((range) => (
                     <label key={range.value} className="flex items-center space-x-3 cursor-pointer">
                       <input
