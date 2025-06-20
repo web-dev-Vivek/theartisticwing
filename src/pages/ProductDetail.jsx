@@ -66,7 +66,7 @@ function ProductDetail() {
               <h1 className="text-3xl lg:text-4xl font-serif font-bold text-gray-800 mb-4">
                 {product.name}
               </h1>
-              
+
               <div className="flex items-center space-x-4 mb-4">
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -284,7 +284,7 @@ function ProductDetail() {
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-2">Shipping Information</h3>
                   <ul className="text-gray-600 space-y-1">
-                    <li>• Free shipping on orders over $50</li>
+                    <li>• Free shipping on orders over ₹2500</li>
                     <li>• Standard shipping: 5-7 business days</li>
                     <li>• Express shipping: 2-3 business days</li>
                     <li>• Carefully packaged to prevent damage</li>

@@ -91,7 +91,7 @@ function Products() {
     setSearchParams({});
   };
 
-  const activeFiltersCount = Object.values(filters).filter(value => 
+  const activeFiltersCount = Object.values(filters).filter(value =>
     value !== 'all' && value !== 'featured' && value !== ''
   ).length;
 
@@ -191,7 +191,7 @@ function Products() {
               </div>
 
               {/* Availability */}
-              <div>
+              {/* <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Availability
                 </label>
@@ -202,7 +202,7 @@ function Products() {
                   />
                   <span className="text-sm text-gray-700">In Stock Only</span>
                 </label>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -213,7 +213,7 @@ function Products() {
               <p className="text-gray-600">
                 Showing {filteredProducts.length} of {products.length} products
               </p>
-              
+
               <div className="flex items-center space-x-2">
                 <label className="text-sm text-gray-700">Sort by:</label>
                 <select

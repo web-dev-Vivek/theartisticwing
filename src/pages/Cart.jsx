@@ -4,7 +4,7 @@ import { useCart } from '../context/CartContext';
 function Cart() {
   const { cart, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
 
-  const shippingCost = getCartTotal() >= 50 ? 0 : 5.99;
+  const shippingCost = getCartTotal() >= 2500 ? 0 : 150;
   const tax = getCartTotal() * 0.08;
   const total = getCartTotal() + shippingCost + tax;
 
@@ -167,7 +167,7 @@ function Cart() {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-semibold">
-                    {shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}
+                    {shippingCost === 0 ? 'Free' : `₹${shippingCost.toFixed(2)}`}
                   </span>
                 </div>
 
@@ -233,7 +233,7 @@ function Cart() {
                   <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Free shipping over $50</span>
+                  <span>Free shipping over ₹2500</span>
                 </div>
               </div>
             </div>
