@@ -73,7 +73,7 @@ function Cart() {
                           className="w-20 h-20 object-cover rounded-lg"
                         />
                       </div>
-                      
+
                       <div className="flex-1">
                         <Link
                           to={`/product/${item.id}`}
@@ -157,20 +157,20 @@ function Cart() {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-md p-6 sticky top-14">
               <h2 className="text-xl font-semibold text-gray-800 mb-6">Order Summary</h2>
-              
+
               <div className="space-y-1 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
                   <span className="font-semibold">₹{getCartTotal().toFixed(2)}</span>
                 </div>
-                
+
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-semibold">
                     {shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}
                   </span>
                 </div>
-                
+
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
                   <span className="font-semibold">₹{tax.toFixed(2)}</span>
@@ -183,7 +183,7 @@ function Cart() {
                     </p>
                   </div>
                 )}
-                
+
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between">
                     <span className="text-lg font-semibold text-gray-800">Total</span>
@@ -192,12 +192,29 @@ function Cart() {
                 </div>
               </div>
 
-              <Link
-                to="/checkout"
-                className="w-full bg-primary-500 text-white py-4 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 block text-center"
-              >
-                Proceed to Checkout
-              </Link>
+              <button
+  onClick={() => {
+    const message = cart
+      .map(item => `• ${item.name} x${item.quantity} = ₹${(item.price * item.quantity).toFixed(2)}`)
+      .join('\n');
+
+    const finalMessage = `🛒 *Order Details*:\n${message}\n\nTotal: ₹${total.toFixed(2)}\n\nThank you!`;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(finalMessage)
+      .then(() => {
+        alert("Order details copied! You'll be redirected to Instagram to complete the process.");
+        window.open("https://www.instagram.com/theartisticwings/", "_blank");
+      })
+      .catch(err => {
+        alert("Failed to copy order details. Please try again.");
+      });
+  }}
+  className="w-full bg-primary-500 text-white py-4 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 block text-center"
+>
+  Proceed to Checkout
+</button>
+
 
               <div className="mt-4 space-y-2 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
